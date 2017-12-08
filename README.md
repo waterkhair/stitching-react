@@ -12,8 +12,7 @@ A React module to use [Stitching](https://www.npmjs.com/package/stitching) in an
     - [Creating optional metadata collection](https://www.npmjs.com/package/stitching#creating-optional-metadata-collection)
         - [Top-Level Document](https://www.npmjs.com/package/stitching#top-level-document)
   - [Usage](https://www.npmjs.com/package/stitching#usage)
-    - [Connecting to MongoDB Stitch app using Stitching](https://www.npmjs.com/package/stitching#connecting-to-mongodb-stitch-app-using-stitching)
-    - [Connecting to MongoDB Stitch app using Stitching React only](https://www.npmjs.com/package/stitching#connecting-to-mongodb-stitch-app-using-stitching-only)
+    - [Connecting to MongoDB Stitch app using Stitching React](https://www.npmjs.com/package/stitching#connecting-to-mongodb-stitch-app-using-stitching)
 
 ## Documentation
 
@@ -34,7 +33,7 @@ $ npm install stitching-react
 
 ## Overview
 
-`Stitching React` makes easier the usage of [Stitching](https://www.npmjs.com/package/stitching-react#documentation), a module running on top of `MongoDB Stitch` to [Authentication](https://docs.mongodb.com/stitch/authentication/).
+`Stitching React` makes easier the usage of [Stitching](https://www.npmjs.com/package/stitching-react#documentation), a module running on top of `MongoDB Stitch`.
 
 ## Setting up MongoDB Stitch app
 
@@ -93,29 +92,7 @@ VALID
 
 ## Usage
 
-### Connecting to MongoDB Stitch app using Stitching
-
-Before using any `Stitching` functionality, lets connect to our `MongoDB Stitch` app.
-
-```js
-const stitching = require("stitching");
-
-// Configuration
-const APP_ID = "example-<random_value>";
-const CLUSTER = "mongodb-atlas";
-const DB = "example";
-const ENDPOINT = "https://stitch.mongodb.com";
-const METADATA = "metadata"; // Optional collection name to handle user metadata (I.E. name, dob, profile_image, etc)
-
-// Connect to MongoDB Stitch app
-stitching.connect(APP_ID, ENDPOINT, CLUSTER, DB, METADATA);
-```
-
-After you connect your `Stitching`, you can access auth (`Stitching Authentication`), client (`MongoDB Stitch Client`), db (`MongoDB Stitch DB`) and providers (enum).
-
-**Note:** Stitching React internally uses Stitching. You only need to connect Stitching once (using Stitching directly or Stitching React).
-
-### Connecting to MongoDB Stitch app using Stitching React only
+### Connecting to MongoDB Stitch app using Stitching React
 
 If you don't want to use `Stitching` module on his own, you can use `Stitching React` to connect.
 
@@ -134,3 +111,5 @@ stitchingReact.connect(APP_ID, ENDPOINT, CLUSTER, DB, METADATA);
 ```
 
 After you connect your `Stitching React`, you can use all components to register users, confirm emails, login and update metadata.
+
+**Note:** Stitching React internally uses Stitching. You only need to connect Stitching once (using Stitching directly or Stitching React).
