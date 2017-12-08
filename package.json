@@ -1,0 +1,41 @@
+{
+  "name": "stitching-react",
+  "version": "0.0.1",
+  "description": "A React module to use Stitching in an easy way.",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel ./src -d lib && copy .\\src\\resources\\react.css .\\lib\\resources\\react.css",
+    "lint": "eslint ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waterkhair/stitching-react.git"
+  },
+  "keywords": [
+    "stitching-react",
+    "stitching",
+    "mongodb",
+    "stitch",
+    "react",
+    "components",
+    "ui"
+  ],
+  "author": "Jesus Barajas",
+  "license": "ISC",
+  "homepage": "https://github.com/waterkhair/stitching-react",
+  "dependencies": {
+    "react": "16.2.0",
+    "react-table": "6.7.4",
+    "stitching": "0.0.23"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-eslint": "8.0.2",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-plugin-transform-react-jsx": "6.24.1",
+    "babel-preset-env": "1.6.1",
+    "eslint": "4.12.0",
+    "eslint-plugin-react": "7.5.1"
+  }
+}

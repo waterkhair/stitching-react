@@ -1,0 +1,370 @@
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* GENERIC */
+.stitching-caret {
+    cursor: pointer;
+}
+
+.stitching-caret-left {
+    position: relative;
+}
+
+.stitching-caret-left:after {
+    border-bottom: 7px solid transparent;
+    border-right: 7px solid #555555;
+    border-top: 7px solid transparent;
+    content: "";
+    left: -4px;
+    position: absolute;
+    top: 1px;
+}
+
+.stitching-caret-right {
+    position: relative;
+}
+
+.stitching-caret-right:after {
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid #555555;
+    border-top: 7px solid transparent;
+    content: "";
+    right: -4px;
+    position: absolute;
+    top: 1px;
+}
+
+.stitching-form {
+    border: solid 1px #666666;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    margin: 0 auto 100px;
+    max-width: 360px;
+    padding: 45px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.stitching-form button {
+    -webkit-transition: all 0.3 ease;
+    border: 0;
+    cursor: pointer;
+    font-family: "sans-serif";
+    font-size: 14px;
+    outline: 0;
+    padding: 15px;
+    text-transform: uppercase;
+    transition: all 0.3 ease;
+    width: 100%;
+}
+
+.stitching-form input {
+    box-sizing: border-box;
+    border: 0;
+    font-family: "sans-serif";
+    font-size: 14px;
+    margin: 0 0 15px;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+}
+
+.stitching-form .error-message {
+    background-color: #fdb6b6;
+    border: 1px solid #fd7a7a;
+    color: #000000;
+    height: 52px;
+    line-height: 52px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.stitching-form .form-link {
+    cursor: pointer;
+}
+
+.stitching-form .form-link:hover {
+    text-decoration: none;
+}
+
+.stitching-form .message {
+    height: 52px;
+    line-height: 52px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.stitching-form .rotate {
+    border-radius: 1em;
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    margin: 0em 0.5em;
+    position: relative;
+    vertical-align: middle;
+    width: 2em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+}
+
+.stitching-form .rotate:hover {
+    transform: rotateZ(360deg);
+    transition: 0.5s;
+}
+
+.stitching-tabs {
+    display: table;
+    width: 100%;
+}
+
+.stitching-tabs .stitching-tab {
+    cursor: pointer;
+    float: left;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 50%;
+}
+
+.stitching-tabs .stitching-selected-tab {
+    cursor: default;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* THEME */
+.stitching-theme-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.stitching-theme-box-container {
+    border: 1px solid silver;
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin-left: 5px;
+    padding: 2px;
+}
+
+.stitching-theme-box-container:hover {
+    border: 1px solid #000000;
+}
+
+.stitching-theme-box-container-selected {
+    border: 1px solid #000000;
+}
+
+.stitching-theme-box {
+    border: 1px solid #000000;
+    display: relative;
+    float: left;
+    height: 15px;
+    width: 15px;
+}
+
+/* BLACK THEME */
+.stitching-theme-black .stitching-form {
+    background-color: #ffffff;
+}
+
+.stitching-theme-black .stitching-form button {
+    background: #000000;
+    border: 1px solid #000000;
+    color: #ffffff;
+}
+
+.stitching-theme-black .stitching-form button:hover, .stitching-theme-black .stitching-form button:active, .stitching-theme-black .stitching-form button:focus {
+    background: #151515;
+}
+
+.stitching-theme-black .stitching-form input {
+    background: #9c9a9a;
+    border: 1px solid #000000;
+}
+
+.stitching-theme-black .stitching-form .form-link {
+    color: #151515;
+}
+
+.stitching-theme-black .stitching-form .form-link:hover {
+    color: #9c9a9a;
+}
+
+.stitching-theme-black .stitching-form .message {
+    background-color: #9c9a9a;
+    border: 1px solid #000000;
+    color: #000000;
+}
+
+.stitching-theme-black .stitching-form .rotate {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.stitching-theme-black .stitching-tabs .stitching-tab {
+    color: #000000;
+}
+
+.stitching-theme-black .stitching-tabs .stitching-selected-tab {
+    background-color: #000000;
+    border: 1px solid #666666;
+    border-bottom: 0px;
+    color: #ffffff;
+}
+
+/* BLUE THEME */
+.stitching-theme-blue .stitching-form {
+    background-color: #ffffff;
+}
+
+.stitching-theme-blue .stitching-form button {
+    background: #0070ff;
+    border: 1px solid #0009ff;
+    color: #ffffff;
+}
+
+.stitching-theme-blue .stitching-form button:hover, .stitching-theme-blue .stitching-form button:active, .stitching-theme-blue .stitching-form button:focus {
+    background: #0009ff;
+}
+
+.stitching-theme-blue .stitching-form input {
+    background: #b9eafd;
+    border: 1px solid #0009ff;
+}
+
+.stitching-theme-blue .stitching-form .form-link {
+    color: #0d083a;
+}
+
+.stitching-theme-blue .stitching-form .form-link:hover {
+    color: #0009ff;
+}
+
+.stitching-theme-blue .stitching-form .message {
+    background-color: #b9eafd;
+    border: 1px solid #0070ff;
+    color: #000000;
+}
+
+.stitching-theme-blue .stitching-form .rotate {
+    background-color: #0070ff;
+    color: #000000;
+}
+
+.stitching-theme-blue .stitching-tabs .stitching-tab {
+    color: #000000;
+}
+
+.stitching-theme-blue .stitching-tabs .stitching-selected-tab {
+    background-color: #0070ff;
+    border: 1px solid #666666;
+    border-bottom: 0px;
+    color: #ffffff;
+}
+
+/* GREEN THEME */
+.stitching-theme-green .stitching-form {
+    background-color: #ffffff;
+}
+
+.stitching-theme-green .stitching-form button {
+    background: #4caf50;
+    border: 1px solid #156711;
+    color: #FFFFFF;
+}
+
+.stitching-theme-green .stitching-form button:hover, .stitching-theme-green .stitching-form button:active, .stitching-theme-green .stitching-form button:focus {
+    background: #156711;
+}
+
+.stitching-theme-green .stitching-form input {
+    background: #c9ffb8;
+    border: 1px solid #156711;
+}
+
+.stitching-theme-green .stitching-form .form-link {
+    color: #0d083a;
+}
+
+.stitching-theme-green .stitching-form .form-link:hover {
+    color: #156711;
+}
+
+.stitching-theme-green .stitching-form .message {
+    background-color: #c9ffb8;
+    border: 1px solid #4caf50;
+    color: #000000;
+}
+
+.stitching-theme-green .stitching-form .rotate {
+    background-color: #4caf50;
+    color: #ffffff;
+}
+
+.stitching-theme-green .stitching-tabs .stitching-tab {
+    color: #000000;
+}
+
+.stitching-theme-green .stitching-tabs .stitching-selected-tab {
+    background-color: #4caf50;
+    border: 1px solid #666666;
+    border-bottom: 0px;
+    color: #ffffff;
+}
+
+/* RED THEME */
+.stitching-theme-red .stitching-form {
+    background-color: #ffffff;
+}
+
+.stitching-theme-red .stitching-form button {
+    background: #dd0000;
+    border: 1px solid #670000;
+    color: #ffffff;
+}
+
+.stitching-theme-red .stitching-form button:hover, .stitching-theme-red .stitching-form button:active, .stitching-theme-red .stitching-form button:focus {
+    background: #670000;
+}
+
+.stitching-theme-red .stitching-form input {
+    background: #f2dede;
+    border: 1px solid #670000;
+}
+
+.stitching-theme-red .stitching-form .form-link {
+    color: #0d083a;
+}
+
+.stitching-theme-red .stitching-form .form-link:hover {
+    color: #670000;
+}
+
+.stitching-theme-red .stitching-form .message {
+    background-color: #f2dede;
+    border: 1px solid #dd0000;
+    color: #000000;
+}
+
+.stitching-theme-red .stitching-form .rotate {
+    background-color: #dd0000;
+    color: #ffffff;
+}
+
+.stitching-theme-red .stitching-tabs .stitching-tab {
+    color: #000000;
+}
+
+.stitching-theme-red .stitching-tabs .stitching-selected-tab {
+    background-color: #dd0000;
+    border: 1px solid #666666;
+    border-bottom: 0px;
+    color: #ffffff;
+}
