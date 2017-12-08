@@ -24,8 +24,6 @@
   "license": "ISC",
   "homepage": "https://github.com/waterkhair/stitching-react",
   "dependencies": {
-    "mongodb-extjson": "2.0.0",
-    "mongodb-stitch": "2.2.0",
     "react": "16.2.0",
     "react-table": "6.7.4",
     "stitching": "0.0.23"
