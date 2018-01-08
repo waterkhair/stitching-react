@@ -7,12 +7,13 @@ A React module to use [Stitching](https://www.npmjs.com/package/stitching) in an
   - [Support](https://www.npmjs.com/package/stitching-react#support)
   - [Installation](https://www.npmjs.com/package/stitching-react#installation)
   - [Overview](https://www.npmjs.com/package/stitching-react#overview)
-  - [Setting up MongoDB Stitch app](https://www.npmjs.com/package/stitching#setting-up-mongodb-stitch-app)
-    - [Setting up Email/Password authentication](https://www.npmjs.com/package/stitching#setting-up-emailpassword-authentication)
-    - [Creating optional metadata collection](https://www.npmjs.com/package/stitching#creating-optional-metadata-collection)
-        - [Top-Level Document](https://www.npmjs.com/package/stitching#top-level-document)
-  - [Usage](https://www.npmjs.com/package/stitching#usage)
-    - [Connecting to MongoDB Stitch app using Stitching React](https://www.npmjs.com/package/stitching#connecting-to-mongodb-stitch-app-using-stitching)
+  - [Setting up MongoDB Stitch app](https://www.npmjs.com/package/stitching-react#setting-up-mongodb-stitch-app)
+    - [Setting up Email/Password authentication](https://www.npmjs.com/package/stitching-react#setting-up-emailpassword-authentication)
+    - [Creating optional metadata collection](https://www.npmjs.com/package/stitching-react#creating-optional-metadata-collection)
+        - [Top-Level Document](https://www.npmjs.com/package/stitching-react#top-level-document)
+  - [Usage](https://www.npmjs.com/package/stitching-react#usage)
+    - [Connecting to MongoDB Stitch app using Stitching React](https://www.npmjs.com/package/stitching-react#connecting-to-mongodb-stitch-app-using-stitching)
+  - [Stitching React Example Project](https://www.npmjs.com/package/stitching-react#stitching-react-example-project)
 
 ## Documentation
 
@@ -97,7 +98,7 @@ VALID
 If you don't want to use `Stitching` module on his own, you can use `Stitching React` to connect.
 
 ```js
-const stitchingReact = require("stitching-react");
+const StitchingReact = require("stitching-react");
 
 // Configuration
 const APP_ID = "example-<random_value>";
@@ -107,9 +108,13 @@ const ENDPOINT = "https://stitch.mongodb.com";
 const METADATA = "metadata"; // Optional collection name to handle user metadata (I.E. name, dob, profile_image, etc)
 
 // Connect to MongoDB Stitch app
-stitchingReact.connect(APP_ID, ENDPOINT, CLUSTER, DB, METADATA);
+StitchingReact.connect(APP_ID, ENDPOINT, CLUSTER, DB, METADATA);
 ```
 
 After you connect your `Stitching React`, you can use all components to register users, confirm emails, login and update metadata.
 
 **Note:** Stitching React internally uses Stitching. You only need to connect Stitching once (using Stitching directly or Stitching React).
+
+### Stitching React Example Project
+
+For a demo project, go to [Stitching React Example](https://www.npmjs.com/package/stitching-react-example)

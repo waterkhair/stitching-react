@@ -4,7 +4,8 @@ export const COUNT = {
 };
 
 export const INDEXES = {
-    FIRST: 0
+    FIRST: 0,
+    SECOND: 1
 };
 
 export const MESSAGES = {
