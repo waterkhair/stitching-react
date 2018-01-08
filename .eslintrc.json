@@ -2,7 +2,8 @@
     "env": {
         "browser": true,
         "commonjs": true,
-        "es6": true
+        "es6": true,
+        "node": true
     },
     "extends": "eslint:all",
     "parser": "babel-eslint",
@@ -25,7 +26,9 @@
         "max-len": "off",
         "max-params": ["error", 5],
         "multiline-ternary": ["error", "always-multiline"],
+        "no-console": "off",
         "no-extra-parens": ["error", "all", {"ignoreJSX": "all"}],
+        "no-process-env": "off",
         "no-ternary": "off",
         "object-curly-newline": "off",
         "one-var": "off",
