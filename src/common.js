@@ -1,4 +1,9 @@
 // Constants
+export const ACTION_TYPES = {
+    SET_CREDENTIALS: "STITCHING_REACT_SET_CREDENTIALS",
+    SET_LOADING: "STITCHING_REACT_SET_LOADING"
+};
+
 export const COUNT = {
     ONE: 1
 };
