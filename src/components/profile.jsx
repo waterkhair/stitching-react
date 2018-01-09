@@ -43,7 +43,7 @@ export default class ProfileComponent extends BaseComponent {
 
                 switch (type) {
                 case "date":
-                    return <FormInput disabled={disabled} inputClass={inputClass} key={index} label={label} name={key} onChange={this.onChange} placeholder={label} type="date" value={value} />;
+                    return <FormInput disabled={disabled} inputClass={inputClass} key={index} label={label} max="2100-12-31" min="1800-01-01" name={key} onChange={this.onChange} placeholder={label} type="date" value={value} />;
                 case "email":
                 case "text":
                     return <FormInput disabled={disabled} inputClass={inputClass} key={index} label={label} name={key} onChange={this.onChange} placeholder={label} type="input" value={value} />;
