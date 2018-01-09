@@ -95,11 +95,11 @@ export default class LoginComponent extends BaseComponent {
     }
 
     swapForm() {
-        this.setState({
+        this.setState((prevState) => ({
             message: null,
             messageClass: null,
-            registering: !this.state.registering
-        });
+            registering: !prevState.registering
+        }));
     }
 
     render() {

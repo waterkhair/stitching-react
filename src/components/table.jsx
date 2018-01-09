@@ -92,7 +92,7 @@ export default class TableComponent extends BaseComponent {
 
     moreColumnsCreator(direction) {
         return () => {
-            this.setState({start: this.state.start + (direction === "left" ? -COUNT.ONE : COUNT.ONE)});
+            this.setState((prevState) => ({start: prevState.start + (direction === "left" ? -COUNT.ONE : COUNT.ONE)}));
         };
     }
 
