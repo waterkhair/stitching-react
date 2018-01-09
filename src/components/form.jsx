@@ -34,8 +34,8 @@ module.exports.FormHidden = ({disabled, name, type, value}) => (
     <input data-type={type} disabled={disabled} name={name} type="hidden" value={value} />
 );
 
-module.exports.FormInput = ({disabled, inputClass, name, type, onChange, placeholder, value}) => (
-    <input className={inputClass} disabled={disabled} name={name} type={type} onChange={onChange} placeholder={placeholder} value={value} />
+module.exports.FormInput = ({disabled, inputClass, max, min, name, type, onChange, placeholder, value}) => (
+    <input className={inputClass} disabled={disabled} max={max} min={min} name={name} type={type} onChange={onChange} placeholder={placeholder} value={value} />
 );
 
 module.exports.SocialNetworkLogin = ({buttonClass, onClick, text}) => (
