@@ -14,13 +14,13 @@ const LOADING_SCREEN_STYLE = {
     zIndex: 10
 };
 const LOADING_STYLE = {
+    WebkitAnimation: "spin 2s linear infinite",
     animation: "spin 2s linear infinite",
     border: "2vmin solid #f3f3f3",
     borderRadius: "50%",
     borderTop: "2vmin solid #555555",
     height: "50vmin",
     margin: "25vmin auto 0px",
-    webkitAnimation: "spin 2s linear infinite",
     width: "50vmin"
 };
 
