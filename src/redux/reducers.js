@@ -57,7 +57,7 @@ export const StitchingReactState = (state = Object.assign({}, initialState), act
                         }
                     }
                     : {
-                        ...initialAuthState.credentials.metadata
+                        ...initialState.credentials.metadata
                     }
             },
             isAuthenticated: action.isAuthenticated ? action.isAuthenticated : false
