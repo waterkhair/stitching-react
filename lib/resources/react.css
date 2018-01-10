@@ -149,6 +149,7 @@
     cursor: pointer;
     display: block;
     float: left;
+    height: 21px;
     margin-left: 5px;
     padding: 2px;
 }
