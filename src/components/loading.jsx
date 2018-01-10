@@ -1,5 +1,6 @@
 // Modules
 import BaseComponent from "./base";
+import PropTypes from "prop-types";
 import React from "react";
 
 // Constants
@@ -23,8 +24,9 @@ const LOADING_STYLE = {
     width: "50vmin"
 };
 
-export default class ConfirmComponent extends BaseComponent {
+export default class LoadingComponent extends BaseComponent {
     static propTypes = {
+        loading: PropTypes.string.isRequired,
         ...BaseComponent.propTypes
     }
 
