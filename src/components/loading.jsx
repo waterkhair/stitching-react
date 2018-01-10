@@ -26,7 +26,7 @@ const LOADING_STYLE = {
 
 export default class LoadingComponent extends BaseComponent {
     static propTypes = {
-        loading: PropTypes.string.isRequired,
+        loading: PropTypes.bool.isRequired,
         ...BaseComponent.propTypes
     }
 
