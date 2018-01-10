@@ -1,5 +1,6 @@
 // Modules
 import ConfirmComponent from "./components/confirm";
+import LoadingComponent from "./components/loading";
 import LoginComponent from "./components/login";
 import LogoutComponent from "./components/logout";
 import ProfileComponent from "./components/profile";
@@ -13,6 +14,7 @@ import TableComponent from "./components/table";
 // Export actions, reducers and components
 export const Actions = ReduxActions;
 export const Confirm = ConfirmComponent;
+export const Loading = LoadingComponent;
 export const Login = LoginComponent;
 export const Logout = LogoutComponent;
 export const Profile = ProfileComponent;
@@ -25,6 +27,7 @@ export const stitching = Stitching;
 export default {
     Actions,
     Confirm,
+    Loading,
     Login,
     Logout,
     Profile,
