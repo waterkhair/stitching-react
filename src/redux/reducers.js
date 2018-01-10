@@ -1,6 +1,5 @@
 // Modules
 import {ACTION_TYPES} from "../common";
-import {combineReducers} from "redux";
 
 // Helpers
 const initialState = {
@@ -74,4 +73,6 @@ export const StitchingReactState = (state = Object.assign({}, initialState), act
         return state;
     }
 };
-export default combineReducers({StitchingReactState});
+export default {
+    StitchingReactState
+};
