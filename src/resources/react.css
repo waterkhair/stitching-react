@@ -42,8 +42,6 @@
 }
 
 .stitching-form {
-    border: solid 1px #666666;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     margin: 0 auto 100px;
     min-width: 360px;
     padding: 45px;
@@ -74,6 +72,11 @@
     outline: 0;
     padding: 15px;
     width: 100%;
+}
+
+.stitching-form .enable-border {
+    border: solid 1px #666666;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .stitching-form .error-message {

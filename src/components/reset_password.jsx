@@ -8,6 +8,7 @@ import React from "react";
 export default class ResetPasswordComponent extends BaseComponent {
     static propTypes = {
         confirmNewPasswordInputClass: PropTypes.string,
+        disableBorder: PropTypes.bool,
         emailInputClass: PropTypes.string,
         newPasswordInputClass: PropTypes.string,
         onPasswordReset: PropTypes.func.isRequired,
@@ -84,7 +85,7 @@ export default class ResetPasswordComponent extends BaseComponent {
         if (token && tokenId) {
             return (
                 <div className={themeColor}>
-                    <Form formClass="stitching-form" id={`${id}_ResetPasswordForm`} message={message} messageClass={messageClass}>
+                    <Form disableBorder={this.props.disableBorder} id={`${id}_ResetPasswordForm`} message={message} messageClass={messageClass}>
                         <FormInput disabled={disabled} inputClass={newPasswordInputClass} name="newPassword" onChange={this.onChange} placeholder={MESSAGES.NEW_PASSWORD} type="password" />
                         <FormInput disabled={disabled} inputClass={confirmNewPasswordInputClass} name="confirmNewPassword" onChange={this.onChange} placeholder={MESSAGES.CONFIRM_NEW_PASSWORD} type="password" />
                         <FormButton buttonClass={resetPasswordButtonClass} disabled={disabled} onClick={this.passwordReset} text={MESSAGES.RESET_PASSWORD} />
@@ -95,7 +96,7 @@ export default class ResetPasswordComponent extends BaseComponent {
 
         return (
             <div className={themeColor}>
-                <Form formClass="stitching-form" id={`${id}_ResetPasswordForm`} message={message} messageClass={messageClass}>
+                <Form disableBorder={this.props.disableBorder} id={`${id}_ResetPasswordForm`} message={message} messageClass={messageClass}>
                     <FormInput disabled={disabled} inputClass={emailInputClass} name="email" onChange={this.onChange} placeholder={MESSAGES.EMAIL} type="input" />
                     <FormButton buttonClass={sendPasswordButtonClass} disabled={disabled} onClick={this.sendPasswordReset} text={MESSAGES.SEND_EMAIL} />
                 </Form>

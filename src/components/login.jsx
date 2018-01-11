@@ -12,6 +12,7 @@ const renderSocialButton = (disableComponent, letter, onClick) => (
 
 export default class LoginComponent extends BaseComponent {
     static propTypes = {
+        disableBorder: PropTypes.bool,
         emailInputClass: PropTypes.string,
         facebookButton: PropTypes.bool,
         googleButton: PropTypes.bool,
@@ -115,7 +116,7 @@ export default class LoginComponent extends BaseComponent {
                         Register
                     </span>
                 </div>
-                <Form formClass="stitching-form" id={`${id}_LoginForm`} message={message} messageClass={messageClass}>
+                <Form disableBorder={this.props.disableBorder} id={`${id}_LoginForm`} message={message} messageClass={messageClass}>
                     <FormInput disabled={disableComponent} inputClass={this.props.emailInputClass} name="email" onChange={this.onChange} placeholder="Email" type="input" />
                     <FormInput disabled={disableComponent} inputClass={this.props.passwordInputClass} name="password" onChange={this.onChange} placeholder="Password" type="password" />
                     {this.state.registering
