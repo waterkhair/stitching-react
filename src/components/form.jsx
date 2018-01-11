@@ -9,6 +9,10 @@ const FORM_BUTTON_STYLE = {
 const FORM_SOCIAL_BUTTON_STYLE = {
     cursor: "pointer"
 };
+const FORM_WITH_BORDER_STYLE = {
+    border: "solid 1px #666666",
+    boxShadow: "0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)"
+};
 
 // Helpers
 const renderFormMessage = (message, messageClass) => (
@@ -18,7 +22,7 @@ const renderFormMessage = (message, messageClass) => (
 );
 
 module.exports.Form = ({children, disableBorder, id, message, messageClass}) => (
-    <form className={`stitching-form${disableBorder ? "" : "-with-border"}`} id={id}>
+    <form className="stitching-form" id={id} style={disableBorder ? null : FORM_WITH_BORDER_STYLE}>
         {message ? renderFormMessage(message, messageClass) : null}
         {children}
     </form>
