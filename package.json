@@ -1,6 +1,6 @@
 {
   "name": "stitching-react",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "A React module to use Stitching in an easy way.",
   "main": "index.js",
   "scripts": {
