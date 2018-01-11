@@ -45,7 +45,7 @@
     border: solid 1px #666666;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     margin: 0 auto 100px;
-    max-width: 360px;
+    min-width: 360px;
     padding: 45px;
     position: relative;
     text-align: center;
