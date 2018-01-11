@@ -18,7 +18,7 @@ const renderFormMessage = (message, messageClass) => (
 );
 
 module.exports.Form = ({children, disableBorder, id, message, messageClass}) => (
-    <form className={`stitching-form${disableBorder ? "" : " enable-border"}`} id={id}>
+    <form className={`stitching-form${disableBorder ? "" : "-with-border"}`} id={id}>
         {message ? renderFormMessage(message, messageClass) : null}
         {children}
     </form>
