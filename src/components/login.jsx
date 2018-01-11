@@ -5,6 +5,11 @@ import PropTypes from "prop-types";
 import React from "react";
 import {providers} from "stitching";
 
+// Constants
+const SELECTED_TAB_WITH_BORDER_STYLE = {
+    boxShadow: "0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)"
+};
+
 // Helpers
 const renderSocialButton = (disableComponent, letter, onClick) => (
     <SocialNetworkLogin disabled={disableComponent} buttonClass="rotate" onClick={onClick} text={letter} />
@@ -109,10 +114,10 @@ export default class LoginComponent extends BaseComponent {
         return (
             <div className={themeColor}>
                 <div className="stitching-tabs">
-                    <span className={`stitching-tab${this.state.registering ? "" : " stitching-selected-tab"}`} onClick={this.swapForm}>
+                    <span className={`stitching-tab${this.state.registering ? "" : " stitching-selected-tab"}`} onClick={this.swapForm} style={this.props.disableBorder ? null : SELECTED_TAB_WITH_BORDER_STYLE}>
                         Login
                     </span>
-                    <span className={`stitching-tab${this.state.registering ? " stitching-selected-tab" : ""}`} onClick={this.swapForm}>
+                    <span className={`stitching-tab${this.state.registering ? " stitching-selected-tab" : ""}`} onClick={this.swapForm} style={this.props.disableBorder ? null : SELECTED_TAB_WITH_BORDER_STYLE}>
                         Register
                     </span>
                 </div>
