@@ -6,7 +6,7 @@ import React from "react";
 import {providers} from "stitching";
 
 // Constants
-const SELECTED_TAB_WITH_BORDER_STYLE = {
+const SELECTED_TAB_BORDER_STYLE = {
     boxShadow: "0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)"
 };
 
@@ -17,7 +17,7 @@ const renderSocialButton = (disableComponent, letter, onClick) => (
 
 export default class LoginComponent extends BaseComponent {
     static propTypes = {
-        disableBorder: PropTypes.bool,
+        border: PropTypes.bool,
         emailInputClass: PropTypes.string,
         facebookButton: PropTypes.bool,
         googleButton: PropTypes.bool,
@@ -25,6 +25,7 @@ export default class LoginComponent extends BaseComponent {
         onAuthenticated: PropTypes.func,
         onLogin: PropTypes.func.isRequired,
         onResetPassword: PropTypes.func.isRequired,
+        padding: PropTypes.bool,
         passwordInputClass: PropTypes.string,
         registerButtonClass: PropTypes.string,
         resetPassowrdButtonClass: PropTypes.string,
@@ -114,14 +115,14 @@ export default class LoginComponent extends BaseComponent {
         return (
             <div className={themeColor}>
                 <div className="stitching-tabs">
-                    <span className={`stitching-tab${this.state.registering ? "" : " stitching-selected-tab"}`} onClick={this.swapForm} style={this.props.disableBorder ? null : SELECTED_TAB_WITH_BORDER_STYLE}>
+                    <span className={`stitching-tab${this.state.registering ? "" : " stitching-selected-tab"}`} onClick={this.swapForm} style={this.props.border ? SELECTED_TAB_BORDER_STYLE : null}>
                         Login
                     </span>
-                    <span className={`stitching-tab${this.state.registering ? " stitching-selected-tab" : ""}`} onClick={this.swapForm} style={this.props.disableBorder ? null : SELECTED_TAB_WITH_BORDER_STYLE}>
+                    <span className={`stitching-tab${this.state.registering ? " stitching-selected-tab" : ""}`} onClick={this.swapForm} style={this.props.border ? SELECTED_TAB_BORDER_STYLE : null}>
                         Register
                     </span>
                 </div>
-                <Form disableBorder={this.props.disableBorder} id={`${id}_LoginForm`} message={message} messageClass={messageClass}>
+                <Form border={this.props.border} id={`${id}_LoginForm`} message={message} messageClass={messageClass} padding={this.props.padding}>
                     <FormInput disabled={disableComponent} inputClass={this.props.emailInputClass} name="email" onChange={this.onChange} placeholder="Email" type="input" />
                     <FormInput disabled={disableComponent} inputClass={this.props.passwordInputClass} name="password" onChange={this.onChange} placeholder="Password" type="password" />
                     {this.state.registering

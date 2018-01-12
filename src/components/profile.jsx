@@ -7,10 +7,11 @@ import React from "react";
 
 export default class ProfileComponent extends BaseComponent {
     static propTypes = {
-        disableBorder: PropTypes.bool,
+        border: PropTypes.bool,
         emailInputClass: PropTypes.string,
         metadataInputClass: PropTypes.string,
         onUpdateProfile: PropTypes.func.isRequired,
+        padding: PropTypes.bool,
         profile: PropTypes.shape({
             email: PropTypes.string.isRequired,
             metadata: PropTypes.object.isRequired
@@ -123,7 +124,7 @@ export default class ProfileComponent extends BaseComponent {
 
         return (
             <div className={themeColor}>
-                <Form disableBorder={this.props.disableBorder} id={`${id}_ProfileForm`} message={message} messageClass={messageClass}>
+                <Form border={this.props.border} id={`${id}_ProfileForm`} message={message} messageClass={messageClass} padding={this.props.padding}>
                     <FormInput disabled={disableComponent} inputClass={this.props.emailInputClass} name="email" onChange={this.onChange} placeholder="Email" type="input" value={email} />
                     {this.renderMetadata()}
                     <FormButton buttonClass={this.props.updateButtonClass} disabled={disableComponent} onClick={this.update} text="Update" />
